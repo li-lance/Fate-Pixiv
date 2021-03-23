@@ -1,0 +1,29 @@
+//addRepo()
+//
+//def addRepo() {
+//  def local = new Properties();
+//  local.load(new File(rootDir, "local.properties").newDataInputStream())
+//  def fileName = local.getProperty('repoConfig')
+//  if (fileName == null) {
+//    throw NullPointerException("local.proprties ==> repoConfig is null")
+//  }
+//  def repoFile = new File(rootDir, "repo.xml")
+//  def repoProjectFile = new File(rootDir, fileName)
+//  if (!repoFile.exists()) {
+//    repoFile.createNewFile()
+//    if (repoProjectFile.exists()) {
+//      repoFile.write(repoProjectFile.text)
+//    }
+//  }
+//}
+
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.eastwood.tools.plugins:gradle-repo:1.2.1'
+  }
+}
+
+apply plugin: 'gradle-repo'

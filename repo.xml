@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<manifest>
+
+  <default fetch="https://github.com/li-lance" />
+
+  <project branch="develop" origin="Fate-Pixiv.git" />
+  <module name="buildSrc" branch="develop" origin="buildSrc.git" />
+  <module name="core" branch="develop" local="fate" origin="android-commons.git" />
+  <module name="arch" branch="develop" local="fate" origin="arch.git" />
+
+</manifest>
