@@ -1,4 +1,4 @@
-package com.lance.tesl
+package com.fate.pixiv
 
 import org.junit.Test
 

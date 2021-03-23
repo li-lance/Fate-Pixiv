@@ -1,12 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+  <!-- Base application theme. -->
 
-    <style name="Theme.Tesl" parent="Fate.DayNight.NoActionBar">
-<!--        <item name="colorPrimary">@color/purple_500</item>-->
-        <item name="android:statusBarColor">@color/immersive_sys_ui</item>
-<!--        <item name="android:windowBackground">@android:color/white</item>-->
-        <item name="android:navigationBarColor">@color/immersive_sys_ui</item>
-    </style>
-  <style name="Fate.DayNight.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+  <style name="Theme.Pixiv" parent="Fate.DayNight.NoActionBar">
+    <!--        <item name="colorPrimary">@color/purple_500</item>-->
+    <item name="android:statusBarColor">@color/immersive_sys_ui</item>
+    <!--        <item name="android:windowBackground">@android:color/white</item>-->
+    <item name="android:navigationBarColor">@color/immersive_sys_ui</item>
+    <item name="android:toolbarStyle">@style/Pixiv.Toolbar</item>
+
+  </style>
+
+  <style name="Fate.DayNight.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+
+  </style>
+
+  <style name="Pixiv.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+    <item name="titleTextColor">@android:color/white</item>
+    <item name="iconTint">@android:color/white</item>
+    <item name="subtitleTextColor">@android:color/white</item>
+<!--    <item name="colorControlNormal">@android:color/white</item>-->
+<!--    <item name="android:textColorPrimary">@android:color/white</item>-->
+<!--    <item name="android:textColorSecondary">@android:color/white</item>-->
   </style>
 </resources>

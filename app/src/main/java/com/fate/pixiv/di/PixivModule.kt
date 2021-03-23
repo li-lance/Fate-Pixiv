@@ -1,16 +1,16 @@
-package com.fate.pixiv
+package com.fate.pixiv.di
 
 import android.app.Application
 import com.fate.core.Build
 import com.fate.core.Environment
-import com.squareup.moshi.Moshi
+import com.fate.pixiv.BuildConfig
+import com.fate.pixiv.login.pkce.PKCEManager
 import com.tencent.mmkv.MMKV
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
-import retrofit2.Retrofit
+import javax.inject.Named
 import javax.inject.Singleton
 
 /**
@@ -41,6 +41,15 @@ object PixivModule {
   @Provides
   fun provideEnvironment(build: Build, application: Application, kv: MMKV): Environment {
     return Environment(application.applicationContext, "https://pokeapi.co/api/v2/", build, kv)
+  }
+
+  @Singleton
+  @Provides
+  @Named("login_url")
+  fun provideLoginUrl(): String {
+    val urlStart = "https://app-api.pixiv.net/web/v1/login?code_challenge="
+    val urlEnd = "&code_challenge_method=S256&client=pixiv-android"
+    return urlStart + PKCEManager.getPKCE().challenge + urlEnd
   }
 
 //  @Singleton

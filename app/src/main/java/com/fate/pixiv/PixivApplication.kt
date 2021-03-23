@@ -14,7 +14,7 @@ import dagger.hilt.android.HiltAndroidApp
 class PixivApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-//    initLogger(BuildConfig.DEBUG)
-//    initMMKV()
+    initLogger(BuildConfig.DEBUG)
+    initMMKV()
   }
 }
