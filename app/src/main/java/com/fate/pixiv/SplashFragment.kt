@@ -1,4 +1,4 @@
-package com.driver.tsla
+package com.fate.pixiv
 
 import android.os.Bundle
 import android.view.View
@@ -18,7 +18,7 @@ class SplashFragment : CoreFragment(R.layout.fragment_splash) {
     super.onViewCreated(view, savedInstanceState)
     lifecycleScope.launch {
       delay(500)
-      toPage(R.id.action_splashFragment_to_agreementFragment)
+//      toPage(R.id.action_splashFragment_to_agreementFragment)
     }
   }
 }

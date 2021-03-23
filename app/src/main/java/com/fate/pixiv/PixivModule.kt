@@ -1,13 +1,8 @@
-package com.driver.tsla
+package com.fate.pixiv
 
 import android.app.Application
-import com.driver.tsla.services.ApiService
 import com.fate.core.Build
 import com.fate.core.Environment
-import com.fate.network.createRetrofit
-import com.fate.network.moshi
-import com.fate.network.okhttp3Logger
-import com.fate.oauth.wechat.WxConfig
 import com.squareup.moshi.Moshi
 import com.tencent.mmkv.MMKV
 import dagger.Module
@@ -48,40 +43,34 @@ object PixivModule {
     return Environment(application.applicationContext, "https://pokeapi.co/api/v2/", build, kv)
   }
 
-  @Singleton
-  @Provides
-  fun provideWxConfig(): WxConfig {
-    return WxConfig("", "")
-  }
+//  @Singleton
+//  @Provides
+//  fun provideOkHttpClient(): OkHttpClient {
+//    return OkHttpClient.Builder()
+//      .okhttp3Logger(BuildConfig.DEBUG)
+//      .build()
+//  }
+//
+//  @Singleton
+//  @Provides
+//  fun provideMoshi(): Moshi {
+//    return moshi()
+//  }
+//
+//  @Singleton
+//  @Provides
+//  fun provideRetrofit(
+//    okHttpClient: OkHttpClient,
+//    moshi: Moshi,
+//    environment: Environment
+//  ): Retrofit {
+//    return createRetrofit(environment.host, okHttpClient, moshi)
+//  }
 
-  @Singleton
-  @Provides
-  fun provideOkHttpClient(): OkHttpClient {
-    return OkHttpClient.Builder()
-      .okhttp3Logger(BuildConfig.DEBUG)
-      .build()
-  }
-
-  @Singleton
-  @Provides
-  fun provideMoshi(): Moshi {
-    return moshi()
-  }
-
-  @Singleton
-  @Provides
-  fun provideRetrofit(
-    okHttpClient: OkHttpClient,
-    moshi: Moshi,
-    environment: Environment
-  ): Retrofit {
-    return createRetrofit(environment.host, okHttpClient, moshi)
-  }
-
-  @Singleton
-  @Provides
-  fun provideApiService(retrofit: Retrofit): ApiService {
-    return retrofit.create(ApiService::class.java)
-  }
+//  @Singleton
+//  @Provides
+//  fun provideApiService(retrofit: Retrofit): ApiService {
+//    return retrofit.create(ApiService::class.java)
+//  }
 
 }

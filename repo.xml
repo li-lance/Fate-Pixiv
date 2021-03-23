@@ -6,7 +6,12 @@
   <module name="buildSrc" branch="develop" origin="buildSrc.git" />
   <module name="core" branch="develop" local="fate" origin="android-commons.git" />
   <module name="arch" branch="develop" local="fate" origin="arch.git" />
-  <module name="app" />
+  <module name="app">
+    <dependencies>
+      <implementation name="arch" />
+      <implementation name="core" />
+    </dependencies>
+  </module>
   <project branch="develop" origin="Fate-Pixiv.git">
     <include name="app" />
   </project>

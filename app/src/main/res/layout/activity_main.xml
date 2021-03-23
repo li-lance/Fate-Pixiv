@@ -28,17 +28,17 @@
 <!--    app:layout_constraintStart_toStartOf="parent"-->
 <!--    app:layout_constraintTop_toTopOf="parent" />-->
 
-  <com.google.android.material.bottomnavigation.BottomNavigationView
-    android:id="@+id/bottom_navigation"
-    android:layout_width="0dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    android:visibility="gone"
-    app:backgroundTint="#151516"
-    app:itemTextColor="@color/color_bottom_navigation_tab"
-    app:itemIconTint="@color/color_bottom_navigation_tab"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_height="wrap_content"
-    app:menu="@menu/bottom_navigation_menu" />
+<!--  <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--    android:id="@+id/bottom_navigation"-->
+<!--    android:layout_width="0dp"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    android:visibility="gone"-->
+<!--    app:backgroundTint="#151516"-->
+<!--    app:itemTextColor="@color/color_bottom_navigation_tab"-->
+<!--    app:itemIconTint="@color/color_bottom_navigation_tab"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    app:menu="@menu/bottom_navigation_menu" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

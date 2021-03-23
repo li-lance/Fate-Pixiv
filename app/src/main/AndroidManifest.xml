@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   package="com.fate.pixiv">
+  <uses-permission android:name="android.permission.INTERNET" />
 
   <application
+    android:name=".PixivApplication"
     android:allowBackup="false"
     android:icon="@mipmap/ic_launcher"
     android:label="@string/app_name"
@@ -12,7 +14,7 @@
     android:theme="@style/Theme.Tesl"
     tools:ignore="AllowBackup">
     <activity
-      android:name="com.driver.tsla.MainActivity"
+      android:name=".MainActivity"
       android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -22,6 +24,5 @@
     </activity>
   </application>
 
-  <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

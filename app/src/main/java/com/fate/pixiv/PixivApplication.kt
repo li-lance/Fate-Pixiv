@@ -1,5 +1,6 @@
-package com.driver.tsla
+package com.fate.pixiv
 
+import android.app.Application
 import com.fate.arch.CoreApplication
 import com.fate.core.libs.initMMKV
 import com.fate.core.log.initLogger
@@ -10,10 +11,10 @@ import dagger.hilt.android.HiltAndroidApp
  * email：foryun@live.com
  */
 @HiltAndroidApp
-class PixivApplication : CoreApplication() {
+class PixivApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-    initLogger(BuildConfig.DEBUG)
-    initMMKV()
+//    initLogger(BuildConfig.DEBUG)
+//    initMMKV()
   }
 }
