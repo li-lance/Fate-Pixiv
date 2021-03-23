@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">tesl</string>
+  <string name="agreement_welcome">欢迎光临</string>
+  <string name="agreement_next">继续</string>
+  <string name="content_agreement">点击继续视为同意 用户协议 和 隐私条款</string>
+  <string name="home">Home</string>
+  <string name="my">My</string>
+</resources>

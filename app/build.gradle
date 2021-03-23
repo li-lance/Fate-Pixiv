@@ -1,0 +1,76 @@
+plugins {
+  id 'com.android.application'
+  id 'kotlin-android'
+  id 'kotlin-kapt'
+  id 'dagger.hilt.android.plugin'
+}
+kapt {
+  correctErrorTypes true
+}
+import com.fate.buildsrc.*
+
+android {
+  defaultConfig {
+    applicationId "com.fate.pixiv"
+    //        minSdkVersion Versions.minSdk
+    //        targetSdkVersion Versions.targetSdk
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  kotlinOptions {
+    jvmTarget = '1.8'
+    useIR = true
+  }
+  buildFeatures {
+    viewBinding true
+  }
+  //    composeOptions {
+  //        kotlinCompilerExtensionVersion Libs.Androidx.Compose.version
+  //        kotlinCompilerVersion Libs.Kotlin.version
+  //    }
+}
+
+import com.fate.buildsrc.*
+
+dependencies {
+  testImplementation Test.junit
+  androidTestImplementation Test.Ext.junit
+  androidTestImplementation Test.espressoCore
+
+  implementation Libs.Androidx.appcompat
+  implementation Libs.Androidx.core
+  implementation Libs.Dagger.hilt
+  implementation Libs.Androidx.material
+  implementation Libs.Androidx.constraintlayout
+  kapt Libs.Dagger.Apt.hilt
+
+  implementation Libs.Androidx.Navigation.runtime
+  implementation Libs.Androidx.Navigation.fragment
+  implementation Libs.Androidx.Navigation.ui
+  implementation Libs.Androidx.KTX.activity
+  implementation Libs.Androidx.KTX.fragment
+  implementation Libs.Androidx.Lifecycle.livedata
+  implementation Libs.Androidx.Lifecycle.runtime
+  implementation Libs.Androidx.Lifecycle.common_java8
+
+  implementation Libs.Retrofit.retrofit
+  implementation Libs.Retrofit.moshi
+  implementation Libs.Retrofit.scalars
+  implementation Libs.Moshi.moshi
+  kapt Libs.Moshi.Apt.moshi
+  implementation Libs.Coroutines.coroutines
+  //    implementation Libs.Mavericks.navigation
+  testImplementation Test.junit
+  androidTestImplementation Test.espressoCore
+  androidTestImplementation Test.Ext.junit
+  implementation Libs.TENCENT.mmkv
+}

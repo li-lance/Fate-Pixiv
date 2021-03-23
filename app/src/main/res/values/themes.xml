@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+    <style name="Theme.Tesl" parent="Fate.DayNight.NoActionBar">
+<!--        <item name="colorPrimary">@color/purple_500</item>-->
+        <item name="android:statusBarColor">@color/immersive_sys_ui</item>
+<!--        <item name="android:windowBackground">@android:color/white</item>-->
+        <item name="android:navigationBarColor">@color/immersive_sys_ui</item>
+    </style>
+
+</resources>
